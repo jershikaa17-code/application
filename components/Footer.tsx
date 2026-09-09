@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { withBasePath } from "@/lib/basePath";
 
 function Rule({ trackClassName }: { trackClassName?: string }) {
   return (
@@ -43,7 +44,7 @@ export default function Footer() {
               muted
               playsInline
             >
-              <source src="/footer_video.mp4" type="video/mp4" />
+              <source src={withBasePath("/footer_video.mp4")} type="video/mp4" />
             </video>
             <p className="max-w-sm text-md leading-relaxed text-black/50">
               Operations × Intelligence × Design

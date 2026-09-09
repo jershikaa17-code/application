@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { withBasePath } from "@/lib/basePath";
 
 const NAV_LINKS = ["About", "Services", "Careers", "Blogs"];
 
@@ -13,7 +14,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 w-full z-30 backdrop-blur-xl bg-white/70 border-b border-black/10">
       <div className="flex items-center justify-between px-4 sm:px-6 md:px-12 lg:px-20 h-16 sm:h-18">
         <Link href="/" className="flex items-center shrink-0 pr-20 border-none gap-2">
-          <Image src="/logo.png" alt="OpsMonsters" width={36} height={36} className="w-8 h-8 sm:w-9 sm:h-9 shrink-0" priority />
+          <Image src={withBasePath("/logo.png")} alt="OpsMonsters" width={36} height={36} className="w-8 h-8 sm:w-9 sm:h-9 shrink-0" priority />
           <span className="flex items-baseline text-lg sm:text-xl lg:text-2xl font-bold tracking-tight">
             <span className="text-primary">Ops</span>
             <span className="text-[#797c81]">Monsters</span>
